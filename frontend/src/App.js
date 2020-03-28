@@ -1,25 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/**
+ * Aprendizado:
+ 
+
+import React, { useState } from 'react';
+
+import Header from './Header';
+// JSX (JavaScript XML)
 
 function App() {
+  /* usando o título
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello OmniStack!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Header title="Semana OmniStack" />
+  );
+  *
+
+  /* usando children 
+  return (
+    <Header>
+      Semana OmniStack
+    </Header>
+  );
+  *
+
+  const [counter, setCounter] = useState(0);
+  /*
+   * useState
+   * retorna um array com 2 posições: o valor da variável e uma função de atualização
+   * Array [valor, funcaoDeAtualizacao]
+   *
+
+  function increment() {
+    setCounter(counter + 1);
+  }
+  return(
+    <div>
+      <Header>Contador: {counter}</Header>
+      <button onClick={increment}>Incrementar</button>
     </div>
+  );
+}
+
+export default App;
+
+*/
+
+import React from 'react';
+
+import './global.css';
+
+import Routes from './routes';
+
+function App() {
+  return(
+    <Routes />
   );
 }
 
